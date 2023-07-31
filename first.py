@@ -1,4 +1,6 @@
 x = 0
 for i in range(101):
-    x += i
+    if i % 2 == 0:
+        x += i
+        print(i)
 print(x)

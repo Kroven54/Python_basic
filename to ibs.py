@@ -1,3 +1,3 @@
 s = 'bfgshbkis'
-request = s[-2] + s[0] + s[-1]
+request = s[-2:-8:-2]
 print(request)

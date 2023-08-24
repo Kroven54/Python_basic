@@ -7,10 +7,6 @@ class Animal:
     def voice(self):
         return 'Some voice'
 
-    def print_num_instances():
-        print(f'Кол-во созданных сущностей {Animal.numInstances}')
-        pass
-
 
 class Dog(Animal):
     def voice(self):
@@ -27,10 +23,15 @@ class Hamster(Animal):
         return 'Squeak'
 
 
+def print_num_instances():
+    print(f'Кол-во созданных сущностей {Animal.numInstances}')
+    pass
+
+
 Bob = Dog()
 Masha = Cat()
 Tony = Hamster()
-Animal.print_num_instances()
+print_num_instances()
 print(Bob.voice())
 print(Masha.voice())
 print(Tony.voice())

@@ -1,6 +1,11 @@
 class Animal:
     numInstances = 0
 
+    @staticmethod
+    def print_num_instances():
+        print(f'Кол-во созданных сущностей {Animal.numInstances}')
+
+
     def __init__(self):
         Animal.numInstances = Animal.numInstances + 1
 
@@ -23,15 +28,10 @@ class Hamster(Animal):
         return 'Squeak'
 
 
-def print_num_instances():
-    print(f'Кол-во созданных сущностей {Animal.numInstances}')
-    pass
-
-
 Bob = Dog()
 Masha = Cat()
 Tony = Hamster()
-print_num_instances()
+Animal.print_num_instances()
 print(Bob.voice())
 print(Masha.voice())
 print(Tony.voice())
